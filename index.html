@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <br>
+        <h1>Job Application Tracker</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Add New Application</h2>
+            <form id="applicationForm">
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" required>
+
+                <label for="position">Position:</label>
+                <input type="text" id="position" required>
+
+                <label for="date">Application Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="status">Application Status:</label>
+                <select id="status" required>
+                    <option value="applied">Applied</option>
+                    <option value="interview">Interview</option>
+                    <option value="offer">Offer</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+
+                <button type="submit">Add Application</button>
+            </form>
+        </section>
+
+        <section class="tracker-section">
+            <h2>Application List</h2>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Date Applied</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationTable">
+                    <!-- Application rows will be dynamically added here -->
+                </tbody>
+            </table>
+            
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
